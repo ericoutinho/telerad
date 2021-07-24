@@ -1,0 +1,214 @@
+$brand-primary: #23A7B4;
+$brand-secondary: #B7DB5A;
+$brand-dark: #2C3E50;
+$brand-light: #F9F9F9;
+
+$primary: $brand-primary;
+// $secondary: #4CB599;
+
+@import "../vendor/bootstrap/scss/bootstrap";
+
+html {
+    scroll-padding-top: 63px;
+}
+
+body {
+    position: relative;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: $brand-dark;
+    overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+    font-family: 'Poppins', sans-serif;
+    font-weight: 700;
+}
+
+form label {
+    font-family: 'Open Sans', serif;
+    font-weight: 400;
+    font-size: .9rem;
+}
+
+.nav-link.active {
+    color: $brand-primary;
+    font-weight: 700;
+}
+
+header {}
+
+section {
+    min-height: 100vh;
+    padding: 2.5rem 0;
+}
+
+#apresentacao {
+    $margin-top: 63px;
+
+    background: $brand-dark;
+    background-image: url('assets/telerad-bg-apresentacao.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    color: $brand-light;
+    padding: 0;
+    margin-top: $margin-top;
+    min-height: calc(100vh - #{$margin-top});
+
+    .botao-mais {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: .5rem .75rem;
+        color: $brand-light;
+        background: $brand-primary;
+        font-size: 1rem;
+        border-radius: 5px;
+        box-shadow: 0 0 1rem rgba(0,0,0,.2);
+
+        &:hover {
+            background: #2bc8d6;
+            color: #fff;
+        }
+    }
+}
+
+.apresentacao-actor {
+    animation: show .5s ease-in;
+}
+
+@keyframes show {
+    0% {
+        transform: translateX(100px);
+        opacity: 0;
+    }
+
+    100% {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+#quemsomos {
+    background: $brand-primary;
+    background-image: url('assets/telerad-bg-quem-somos.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: $brand-light;
+    position: relative;
+
+    .botao-servicos {
+        display: inline-block;
+        text-decoration: none;
+        letter-spacing: 1px;
+        padding: .5rem .75rem;
+        color: $brand-light;
+        background: $brand-dark;
+        font-size: 1rem;
+        border-radius: 5px;
+        margin-top: .5rem;
+
+        &:hover {
+            background: #3e5770;
+            color: #fff;
+        }
+    }
+}
+
+#servicos {
+    padding-top: 1.5rem;
+    padding-bottom: 4.5rem;
+}
+
+#contato {
+    min-height: auto;
+    padding-bottom: 7.5rem;
+    background: $brand-light;
+    background-image: url('assets/logo-ondas.svg');
+    background-position: 20px bottom;
+    background-size: auto 7rem;
+    background-repeat: no-repeat;
+
+    .lista-contato {
+        list-style: none;
+        padding: 0;
+
+        li a {
+            display: inline-block;
+            text-decoration: none;
+            color: inherit;
+            padding: .5rem 0;
+
+            i {
+                color: $brand-primary
+            }
+
+            &:hover {
+                color: $brand-primary;
+            }
+        }
+    }
+}
+
+footer {
+    font-size: .9rem;
+    padding: 1rem 0;
+    background: $brand-dark;
+    color: $brand-light;
+}
+
+
+
+.delay-1 {
+    transition-delay: .5s;
+}
+
+.delay-2 {
+    transition-delay: 1s;
+}
+
+.delay-3 {
+    transition-delay: 1.5s;
+}
+
+.from-bottom {
+    transform: translateY(150px);
+    opacity: 0;
+    transition-property: transform opacity;
+    transition-duration: .5s;
+}
+
+.from-bottom.play {
+    transform: translateY(0);
+    opacity: 1;
+}
+
+.from-left {
+    transform: translateX(-150px);
+    opacity: 0;
+    transition-property: transform opacity;
+    transition-duration: .5s;
+}
+
+.from-left.play {
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.from-right {
+    transform: translateX(150px);
+    opacity: 0;
+    transition-property: transform opacity;
+    transition-duration: .5s;
+}
+
+.from-right.play {
+    transform: translateX(0);
+    opacity: 1;
+}
